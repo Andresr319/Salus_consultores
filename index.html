@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Salus Consultores E Ingeniería SAS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Roboto',sans-serif }
+    body {
+      background: url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1350&q=80')
+                  no-repeat center center fixed;
+      background-size:cover; color:#fff; line-height:1.5;
+    }
+    header {
+      background:rgba(0,0,0,0.9); padding:20px 50px;
+      display:flex; align-items:center; justify-content:space-between;
+      position:fixed; width:100%; top:0; transition:transform .3s; z-index:100;
+    }
+    header.hidden { transform: translateY(-100%); }
+    header img { height:60px; }
+    nav a {
+      color:#ffc107; margin-left:25px; text-decoration:none;
+      font-weight:700; transition:color .3s;
+    }
+    nav a:hover { color:#fff }
+    .banner {
+      margin-top:100px; /* para no tapar por el header fijo */
+      background:url('https://images.unsplash.com/photo-1612539008621-f96d41869e61?auto=format&fit=crop&w=1350&q=80')
+               no-repeat center center/cover;
+      height:500px; display:flex; flex-direction:column;
+      justify-content:center; align-items:center;
+      text-shadow:2px 2px 5px rgba(0,0,0,0.7);
+    }
+    .banner h1 { font-size:3rem; color:#ffc107; animation:fadeIn 2s }
+    .banner h2 { font-size:1.5rem; margin-top:10px; color:#fff }
+    @keyframes fadeIn { from{opacity:0} to{opacity:1} }
+    .container {
+      max-width:1200px; margin:40px auto; padding:20px;
+      background:rgba(0,0,0,0.8); border-radius:15px;
+    }
+    .section { margin-bottom:60px }
+    h2 {
+      color:#ffc107; margin-bottom:20px;
+      border-bottom:2px solid #ffc107; padding-bottom:10px;
+    }
+    .grid {
+      display:grid; gap:20px;
+    }
+    /* para tarjetas flexibles */
+    .grid-cols-2 { grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); }
+    .card {
+      background:rgba(255,255,255,0.1); padding:25px;
+      border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.5);
+      transition:transform .3s;
+    }
+    .card:hover { transform:translateY(-5px) }
+    .btn {
+      background:#ffc107; color:#000; padding:12px 30px;
+      border-radius:5px; text-decoration:none; font-weight:700;
+      transition:background .3s; display:inline-block;
+      margin-top:15px;
+    }
+    .btn:hover { background:#e0a800 }
+    img.placeholder {
+      width:100%; height:200px; object-fit:cover;
+      border-radius:10px; background:#333;
+    }
+    .contador {
+      font-size:3rem; font-weight:700; color:#ffc107;
+    }
+    form input, form textarea {
+      width:100%; padding:10px; margin:10px 0;
+      border-radius:5px; border:none;
+    }
+    form button {
+      padding:12px 30px; background:#ffc107;
+      color:#000; border-radius:5px;
+      font-weight:700; cursor:pointer;
+      transition:background .3s;
+    }
+    form button:hover { background:#e0a800 }
+    footer {
+      background:rgba(0,0,0,0.9); color:#fff;
+      text-align:center; padding:20px;
+    }
+    iframe {
+      width:100%; height:300px; border:none;
+      border-radius:10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header id="site-header">
+    <img src="logo.png" alt="Logo Salus Consultores">
+    <nav>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#equipo">Equipo</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <div class="banner">
+    <h1>Salus Consultores E Ingeniería S.A.S</h1>
+    <h2>Más de 10 años de Excelencia en Ingeniería Civil</h2>
+  </div>
+
+  <div class="container">
+
+    <!-- NOSOTROS CON TARJETAS -->
+    <section id="nosotros" class="section">
+      <h2>Nosotros</h2>
+      <div class="grid grid-cols-2">
+        <div class="card">
+          <h3>Misión</h3>
+          <p>Ofrecer servicios de terminación y acabado de edificios y obras civiles con altos estándares de calidad, innovación y cumplimiento, garantizando la satisfacción de nuestros clientes.</p>
+        </div>
+        <div class="card">
+          <h3>Visión</h3>
+          <p>Ser reconocidos nacionalmente como la empresa líder en soluciones integrales de ingeniería civil, apoyando el desarrollo sostenible de la infraestructura en Colombia.</p>
+        </div>
+        <div class="card">
+          <h3>Datos Clave</h3>
+          <ul>
+            <li><b>Constitución:</b> 19-01-2015</li>
+            <li><b>Dirección:</b> DG 2 A SUR # 78 P - 04 BL D 3 AP 102, Bogotá D.C.</li>
+            <li><b>Teléfono:</b> 60...........</li>
+            <li><b>Forma Jurídica:</b> Sociedad Por Acciones Simplificada</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Sector & Tamaño</h3>
+          <ul>
+            <li><b>CIIU:</b> 4330 – Terminación y Acabado de Edificios y Obras de Ingeniería Civil</li>
+            <li><b>Tamaño:</b> Microempresa</li>
+          </ul>
+        </div>
+      </div>
+      <!-- Placeholder para imagen -->
+      <img class="placeholder" src="equipo.jpg" alt="Foto de la empresa / equipo">
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="servicios" class="section">
+      <h2>Servicios</h2>
+      <div class="grid grid-cols-2">
+        <div class="card">
+          <h3>Terminación de Edificios</h3>
+          <p>Acabados de alta calidad en obra gris y blanca.</p>
+          <img class="placeholder" src="" alt="Imagen servicio">
+        </div>
+        <div class="card">
+          <h3>Obras Civiles</h3>
+          <p>Construcción y reparación de infraestructuras bajo normativas técnicas.</p>
+          <img class="placeholder" src="" alt="Imagen servicio">
+        </div>
+        <div class="card">
+          <h3>Consultoría Técnica</h3>
+          <p>Asesoría en planificación, diseño y optimización de proyectos.</p>
+          <img class="placeholder" src="" alt="Imagen servicio">
+        </div>
+        <div class="card">
+          <h3>Supervisión de Obras</h3>
+          <p>Control de calidad, seguridad y cumplimiento de cronogramas.</p>
+          <img class="placeholder" src="" alt="Imagen servicio">
+        </div>
+      </div>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section id="proyectos" class="section">
+      <h2>Proyectos Recientes</h2>
+      <div class="grid grid-cols-2">
+        <div class="card">
+          <img src="d91a6253-4031-40ba-b1f4-f09ec8d23254.png" alt="Trabajo de campo" style="width:100%; border-radius:10px;">
+          <p>Inspección y prueba de materiales en obra</p>
+        </div>
+        <div class="card">
+          <img src="96970b2a-6bee-4af6-b4ae-570c38c802b0.png" alt="Trabajador en altura" style="width:100%; border-radius:10px;">
+          <p>Trabajo en alturas con equipo de seguridad</p>
+        </div>
+        <!-- Más proyectos -->
+      </div>
+    </section>
+
+    <!-- EQUIPO -->
+    <section id="equipo" class="section">
+      <h2>Equipo</h2>
+      <div class="grid grid-cols-2">
+        <div class="card">
+          <img src="29728b15-8170-47aa-8797-8cb696671d11.png" alt="Equipo completo" style="width:100%; border-radius:10px;">
+          <p><b>Equipo Salus Ingeniería</b><br>Profesionales certificados en seguridad industrial y obra civil</p>
+        </div>
+        <!-- Puedes añadir tarjetas individuales de cada miembro -->
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="section">
+      <h2>Contáctanos</h2>
+      <div class="card">
+        <form>
+          <input type="text" placeholder="Nombre completo" required>
+          <input type="email" placeholder="Correo electrónico" required>
+          <textarea rows="5" placeholder="Escriba su mensaje" required></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    Síguenos:
+    <a href="#" style="color:#ffc107; margin:0 10px;">Facebook</a> |
+    <a href="#" style="color:#ffc107; margin:0 10px;">LinkedIn</a> |
+    <a href="#" style="color:#ffc107; margin:0 10px;">Instagram</a><br>
+    © 2025 Salus Consultores E Ingeniería SAS | Todos los derechos reservados
+  </footer>
+
+  <script>
+    // Mostrar/ocultar header al hacer scroll
+    let lastScroll = 0;
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+      const current = window.pageYOffset;
+      if (current > lastScroll) {
+        header.classList.add('hidden');
+      } else {
+        header.classList.remove('hidden');
+      }
+      lastScroll = current;
+    });
+  </script>
+
+</body>
+</html>
